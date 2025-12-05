@@ -1,0 +1,360 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgb(225,220,216);
+    font-family: jost;
+    transition: ease-in-out 0.5s;
+}
+body.scrolled-color {
+    background-color: rgb(19, 20, 20);
+}
+#head, #explanation, #IDKMAN {
+    scroll-margin-top: 120px;
+    scroll-behavior: smooth;
+}
+body.scrolled-color .navbar {
+    background-color: #ff2e3180;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+body.scrolled-color .navbar .dd {
+    background-color: #ff2e3180;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: rgb(225,220,216);
+}
+body.scrolled-color .navbar li a {
+    color: rgb(225,220,216);
+    border-left-color: rgba(255,255,255,0.2);
+}
+body.scrolled-color .explanation {
+    color: rgb(225,220,216);
+}
+.isi{
+    transition: ease-in-out 0.5s;
+}
+body.scrolled-color .isi{
+    color: rgb(225,220,216);
+}
+::-webkit-scrollbar { display: none; }
+/*=================FONT=================*/
+
+.noto-sans-jp { 
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; /*w 100 to 900*/
+  font-style: normal;
+}
+
+.cormorant-garamond {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: normal; /*w 300 to 700*/
+  font-style: normal;
+}
+
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; /*w 100 to 900*/
+  font-style: normal;
+}
+
+.instrument-sans {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; /*w 400 to 700*/
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+@font-face {
+    font-family: 'reckoning';
+    src: url('fontastic/Reckoning-vn39.ttf');
+}
+
+@font-face {
+    font-family: '321impact';
+    src: url('fontastic/321Impact-84oD.ttf');
+}
+/*=================FONT=================*/
+
+/*=================NAVBAR START=================*/
+.navbar {
+    list-style-type: none;
+    width: 90%;
+    background-color: rgba(239,234,215, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: fixed;
+    margin-top: 1vw;
+    margin-left: 5%;
+    border-radius: 0.4vw;
+    z-index: 10000;
+    transition: ease-in-out 0.5s;
+}
+
+.navbar li {
+    float: right;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar li a {
+    display: block;
+    padding: 1.5vw 2.5vw 3vw 2.5vw;
+    text-decoration: none;
+    border-left: 1px solid rgba(135,134,124, 0.3);
+    transition: ease-in-out 0.3s;
+    color: rgb(52,56,55);
+}
+
+.navbar li a:hover {
+    background-color: #d24648;
+}
+
+.divaa1 {
+    position: relative;backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+}
+
+.dd {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(239,234,215,0.5);
+    backdrop-filter: blur(20px) !important; /*IT DOESN'T WORK I GIVE UP IT'S BEEN HOURS*/
+    -webkit-backdrop-filter: blur(20px) !important; /*DO NOT TRY TO FIX, HOURS WASTED HERE: 4*/
+    width:15vw;
+    padding: 6px 0 8px 2vw !important;
+    font-size: 15px;
+    border:2.5px solid transparent;
+    border-radius: 2px;
+    cursor:pointer;
+    transition:.6s;
+    opacity: 0;
+    pointer-events: none;
+    color: rgb(52,56,55);
+}
+.diva1:hover .dd{
+    opacity: 1;
+    color: rgb(52,56,55);
+    pointer-events: auto;
+}
+
+.diva1:hover #reze { top: 0px; }
+.diva1:hover #mkma { top: 40px; }
+.diva1:hover #hmno { top: 80px; }
+.diva1:hover #asa  { top: 120px; }
+.diva1:hover #fmi  { top: 160px; }
+.diva1:hover #pwr  { top: 200px; }
+
+.dd:hover {
+    background-color: #d24649 !important;
+}
+/*=================NAVBAR END=================*/
+.boxbox {
+    margin: 8% 5% 0 5%;
+    width: 90%;
+    height: 38vw;
+    position: absolute;
+    background:
+        /*tl*/  linear-gradient(#d24649, #d24649) no-repeat,
+                linear-gradient(#d24649, #d24649) no-repeat,
+        /*tr*/  linear-gradient(#d24649, #d24649) no-repeat,
+                linear-gradient(#d24649, #d24649) no-repeat,
+        /*bl*/  linear-gradient(#d24649, #d24649) no-repeat,
+                linear-gradient(#d24649, #d24649) no-repeat,
+        /*br*/  linear-gradient(#d24649, #d24649) no-repeat,
+                linear-gradient(#d24649, #d24649) no-repeat;
+    background-size: 6vw 1px, 1px 3vw;
+    background-position:
+        left top, left top,  /* TL: horizontal, vertical */
+        right top, right top, /* TR */
+        left bottom, left bottom, /* BL */
+        right bottom, right bottom; /* BR */
+}
+.teehee {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.headererer {
+    font-family: 'reckoning', '321impact';
+    grid-column: 1 / -1;
+    font-weight: 500;
+    font-size: 15vw;
+    padding-top: 5vw;
+    margin: 0;
+    text-align: center;
+}
+.splash {
+    font-family: jost;
+    text-align: right;
+    font-size: 1.3vw;
+    padding-right: 0.5vw;
+    font-weight: 400;
+}
+.him {
+    font-family: cormorant garamond;
+    font-size: 2.5vw;
+    text-align: justify;
+    padding-right: 0.5vw;
+    font-weight: 900;
+}
+.yap {
+    padding: 50vw 5% 10vw 5%;
+}
+.yapx {
+    padding: 10vw 5% 10vw 5%;
+}
+.header {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.seehead {
+    opacity: 1;
+}
+.yapa {
+    opacity: 0;
+    padding-top: 3vw;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.6s ease;
+}
+.seeyap {
+    opacity: 1;
+    transform: translateX(0);
+}
+.imaaga {
+    width: 50%;
+    height: auto;
+}
+/*=================CAROUSELDSAS=================*/
+input[type="radio"]{ position:absolute; left:-9999px; }
+.carousel-top-row {
+    display: flex;
+    align-items: flex-start;
+    margin: 18px 5%;
+}
+.explanation{
+    padding:250px 18px;
+    font-size:16px;
+    flex: 1;
+    max-width: 40%;
+
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity .36s ease, transform .36s ease;
+    pointer-events: none;
+}
+.explanation.visible{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.slider{
+    flex: 2;
+    min-width: 0;
+    height:500px;
+    position:relative;
+    overflow:hidden;
+}
+.slides{ position:relative; width:100%; height:100%; }
+.slide{
+    position:absolute;
+    top:0;
+    left:100%;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition: opacity 400ms ease-in-out;
+    will-change: transform, opacity;
+}
+.slide img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* === IMPORTANT === */
+#s1:checked ~ .carousel-top-row .slider .slides #slide1,
+#s2:checked ~ .carousel-top-row .slider .slides #slide2,
+#s3:checked ~ .carousel-top-row .slider .slides #slide3,
+#s4:checked ~ .carousel-top-row .slider .slides #slide4,
+#s5:checked ~ .carousel-top-row .slider .slides #slide5,
+#s6:checked ~ .carousel-top-row .slider .slides #slide6 {
+    left:0;
+    opacity:1;
+}
+/* ========== marquee ========== */
+.thumbnail-bar{
+    margin-top:18px;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
+.marquee-track{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    animation: marquee-scroll var(--marquee-duration) linear infinite;
+    padding-bottom:8px;
+    white-space:nowrap;
+}
+.marquee-track:hover{ animation-play-state:paused; }
+@keyframes marquee-scroll {
+    0%{ transform: translateX(0); }
+    100%{ transform: translateX(calc(var(--marquee-distance) * -1)); }
+}
+.card-thumb{
+    min-width:200px;
+    height:120px;
+    overflow:hidden;
+    display:block;
+    cursor:pointer;
+    transition: opacity 0.5s ease, transform 0.6s ease;
+}
+.card-thumb:hover{ transform: scale(1.03); }
+.card-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.card-thumb.active{
+    border-color: rgba(0,132,209,0.9);
+    box-shadow: 0 6px 18px rgba(0,132,209,0.12);
+    transform: scale(1.04);
+}
+/*
+.rezebg {
+    background-image: url('https://cdn.teater.co/imgs/article-chainsaw-man-the-movie-reze-arc-2025-2_890_490.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100%;
+}
+
+*/
+.footer {
+    width: 100%;
+    background-color: #d24649;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 1.5vw 0;
+    text-align: center;
+    margin-top: 5vw;
+}
+.footer-inner {
+    width: 90%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2vw;
+    border-radius: 0.2vw;
+}
+.footer p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1vw;
+    color: rgb(225,220,216);
+    margin: 0;
+}
