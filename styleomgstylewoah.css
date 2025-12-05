@@ -76,12 +76,12 @@ body.scrolled-color .isi{
 
 @font-face {
     font-family: 'reckoning';
-    src: url('fontastic/Reckoning-vn39.ttf');
+    src: url('Reckoning-vn39.ttf');
 }
 
 @font-face {
     font-family: '321impact';
-    src: url('fontastic/321Impact-84oD.ttf');
+    src: url('321Impact-84oD.ttf');
 }
 /*=================FONT=================*/
 
@@ -357,4 +357,5 @@ input[type="radio"]{ position:absolute; left:-9999px; }
     font-size: 1vw;
     color: rgb(225,220,216);
     margin: 0;
+
 }
